@@ -7,7 +7,11 @@ def index_of(target, lst):
 
     Ejemplo: index_of("Black", ["Red", "Green", "Black"]) -> 2
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    for indice, valor in enumerate(lst):
+        if valor == target:
+            return indice
+
+    return -1
 
 
 def index_of_by_index(target, lst, start):
@@ -18,7 +22,11 @@ def index_of_by_index(target, lst, start):
 
     Ejemplo: index_of_by_index("Black", ["Red", "Black", "Green", "Black"], 2) -> 3
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    for indice in range(start, len(lst)):
+        if lst[indice]==target:
+            return indice
+
+    return -1
 
 
 def index_of_empty(lst):
@@ -28,4 +36,8 @@ def index_of_empty(lst):
 
     Ejemplo: index_of_empty(["Red", "", "Green"]) -> 1
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    for indice, valor in enumerate(lst):
+        if valor == "":
+            return indice
+
+    return -1
