@@ -1,5 +1,3 @@
-# Replace the "ANSWER HERE" for your answer
-
 def power(base, exp):
     """
     Retorna base elevado a exp usando un bucle for.
@@ -7,13 +5,13 @@ def power(base, exp):
 
     Ejemplo: power(2, 3) -> 8  (2*2*2)
     """
+    if exp==0:
+        return 1
     final=base
-    for num in range(exp-1):
+    for cant in range(exp-1):
         final*=base
-        print(final,num)
 
     return final
-power(2,3)
 
 def sum_of_powers(base, max_exp):
     """
@@ -25,3 +23,5 @@ def sum_of_powers(base, max_exp):
     suma=0
     for num in range(max_exp+1):
         suma+=power(base,num)
+
+    return suma
